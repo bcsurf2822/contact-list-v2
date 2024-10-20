@@ -35,7 +35,7 @@ export default function Home() {
       <Container className="search-bar">
         <SearchBar />
       </Container>
-      <Container as="content" className="content">
+      <Container as="content" className={styles.tableContainer}>
         <Contacts contacts={contacts} />
       </Container>
     </>

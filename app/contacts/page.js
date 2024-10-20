@@ -8,15 +8,17 @@ import PropTypes from "prop-types";
 import { formatNumber } from "../utilities/formatNumber";
 import ContactInfo from "./[id]/page";
 
+import styles from "./page.module.css"
+
 export default function Contacts({ contacts }) {
   Contacts.PropTypes = {
     contacts: PropTypes.objectOf(PropTypes.array).isRequired,
   };
 
   return (
-    <div>
-      <Table striped bordered hover>
-        <thead>
+    <div  className={styles.tableContainer}  >
+      <Table  striped hover className={styles.table}>
+        <thead className={styles.tableHeader}>
           <tr>
             <th></th>
             <th>Name</th>
