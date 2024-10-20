@@ -1,9 +1,18 @@
 "use client";
 
-import React from "react";
-import { Table } from "react-bootstrap";
+import Link from "next/link";
 
-export default function Contacts() {
+import React from "react";
+import { Button, Table } from "react-bootstrap";
+import PropTypes from "prop-types";
+import { formatNumber } from "../utilities/formatNumber";
+import ContactInfo from "./[id]/page";
+
+export default function Contacts({ contacts }) {
+  Contacts.PropTypes = {
+    contacts: PropTypes.objectOf(PropTypes.array).isRequired,
+  };
+
   return (
     <div>
       <Table striped bordered hover>
@@ -16,23 +25,20 @@ export default function Contacts() {
           </tr>
         </thead>
         <tbody>
-          <tr>
-            <td>1</td>
-            <td>Mark</td>
-            <td>Otto</td>
-            <td>@mdo</td>
-          </tr>
-          <tr>
-            <td>2</td>
-            <td>Jacob</td>
-            <td>Thornton</td>
-            <td>@fat</td>
-          </tr>
-          <tr>
-            <td>3</td>
-            <td colSpan={2}>Larry the Bird</td>
-            <td>@twitter</td>
-          </tr>
+          {contacts.map((contact) => (
+            <tr key={contact.id}>
+              <td>{contact.id}</td>
+              <td>{contact.name}</td>
+              <td>{contact.email}</td>
+              <td>{formatNumber(contact.phone_number)}</td>
+
+              <td className="function-btn">
+                {" "}
+                <Button variant="warning">Edit</Button>{" "}
+                <Button variant="danger">Delete</Button>
+              </td>
+            </tr>
+          ))}
         </tbody>
       </Table>
     </div>

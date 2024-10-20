@@ -1,4 +1,4 @@
-'use client'
+"use client";
 
 import Head from "next/head";
 import styles from "./page.module.css";
@@ -10,23 +10,21 @@ import axios from "axios";
 import { useEffect, useState } from "react";
 
 export default function Home() {
-
   const [contacts, setContacts] = useState([]);
 
-useEffect(() => {
-  axios.get('/contacts.json')
-  .then((response) => {
-    console.log(response)
-    setContacts(response.data)
-  })
-  .catch((error) => {
-    console.log(error)
-  })
-}, [])
+  useEffect(() => {
+    axios
+      .get("/contacts.json")
+      .then((response) => {
+        console.log("AXIO", response.data.contacts);
+        setContacts(response.data.contacts);
+      })
+      .catch((error) => {
+        console.log(error);
+      });
+  }, []);
 
-console.log(contacts)
-
-
+  console.log(contacts);
 
   return (
     <>
@@ -38,9 +36,7 @@ console.log(contacts)
         <SearchBar />
       </Container>
       <Container as="content" className="content">
-        <Col>
-          <Contacts />
-        </Col>
+        <Contacts contacts={contacts} />
       </Container>
     </>
   );
