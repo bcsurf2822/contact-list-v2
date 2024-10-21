@@ -34,6 +34,10 @@ export default function AddContact() {
 
   return (
     <div>
+      <Container>
+        <h2>New Contact Information</h2>
+
+      </Container>
       <Container className={styles.addContainer}>
         <Form onSubmit={handleAddContact}>
           <Form.Group className="mb-3" controlId="formGroupName">

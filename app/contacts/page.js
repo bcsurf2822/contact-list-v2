@@ -1,7 +1,5 @@
 "use client";
 
-import Link from "next/link";
-
 import React from "react";
 import { Button, Table } from "react-bootstrap";
 import { formatNumber } from "../utilities/generalFunctions";
@@ -9,13 +7,19 @@ import ContactInfo from "./[id]/page";
 import PropTypes from 'prop-types';
 
 import styles from "./page.module.css";
+import { useContacts } from "../contexts/ContactsProvider";
+import { useRouter } from "next/navigation";
 
 export default function Contacts({ filteredContact }) {
 
+  const router = useRouter();
+
   const handleDoubleClick = (e) => {
     console.log("You click on :", e)
-    
+    router.push(`/contacts/${e}`)
   }
+
+  const {deleteContact} = useContacts();
 
   return (
     <div className={styles.tableContainer}>
@@ -31,14 +35,8 @@ export default function Contacts({ filteredContact }) {
         </thead>
         <tbody>
           {filteredContact.map((contact) => (
-            <tr onDoubleClick={() => handleDoubleClick(contact)} key={contact.id}>
+            <tr onDoubleClick={() => handleDoubleClick(contact.id)} key={contact.id}>
               <td>
-                {" "}
-                <img
-                  className={styles.userImage}
-                  src={contact.image_URL}
-                  alt=""
-                />
               </td>
               <td>{contact.name}</td>
               <td>{contact.email}</td>
@@ -48,7 +46,7 @@ export default function Contacts({ filteredContact }) {
               <td className="function-btn">
                 {" "}
                 <Button variant="warning">Edit</Button>{" "}
-                <Button variant="danger">Delete</Button>
+                <Button variant="danger" onClick={() => deleteContact(contact.id)}>Delete</Button>
               </td>
             </tr>
           ))}
