@@ -17,10 +17,15 @@ export default function Home() {
   const [search, setSearch] = useState("");
   console.log(search);
 
-  const filteredContact = contacts.filter((contact) =>
-    contact.name.toLowerCase().includes(search.toLocaleLowerCase())
-  );
+  const filteredContact = contacts.filter((contact) => {
+    const [firstName, lastName] = contact.name.toLowerCase().split(' '); 
+    return (
+      firstName.startsWith(search.toLowerCase()) || 
+      (lastName && lastName.startsWith(search.toLowerCase())) 
+    );
+  });
 
+  
   return (
     <>
       <Container className={styles.searchAddContainer}>
@@ -28,7 +33,7 @@ export default function Home() {
         <AddContactBtn />
       </Container>
       <Container as="content" className={styles.tableContainer}>
-        <Contacts contacts={contacts} filteredContact={filteredContact} />
+        <Contacts filteredContact={filteredContact} />
       </Container>
     </>
   );

@@ -10,7 +10,7 @@ import PropTypes from 'prop-types';
 
 import styles from "./page.module.css";
 
-export default function Contacts({ contacts }) {
+export default function Contacts({ filteredContact }) {
 
   const handleDoubleClick = (e) => {
     console.log("You click on :", e)
@@ -30,7 +30,7 @@ export default function Contacts({ contacts }) {
           </tr>
         </thead>
         <tbody>
-          {contacts.map((contact) => (
+          {filteredContact.map((contact) => (
             <tr onDoubleClick={() => handleDoubleClick(contact)} key={contact.id}>
               <td>
                 {" "}
@@ -59,7 +59,7 @@ export default function Contacts({ contacts }) {
 }
 
 Contacts.propTypes = {
-  filteredContacts: PropTypes.arrayOf(
+  filteredContact: PropTypes.arrayOf(
     PropTypes.shape({
       id: PropTypes.number.isRequired, 
       name: PropTypes.string.isRequired,
