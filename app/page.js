@@ -6,6 +6,7 @@ import { Col, Container, Row } from "react-bootstrap";
 import Contacts from "./contacts/page";
 import SearchBar from "./components/SearchBar";
 
+
 import AddContactBtn from "./components/AddContactBtn";
 
 import { useContacts } from "./contexts/ContactsProvider";
@@ -16,6 +17,7 @@ export default function Home() {
   return (
     <>
       <Container className="search-bar">
+    
         <SearchBar />
         <AddContactBtn />
       </Container>

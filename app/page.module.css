@@ -118,3 +118,7 @@
 .tableContainer {
   overflow-y: auto;
 }
+
+i .bi {
+  height: 20px;
+}
