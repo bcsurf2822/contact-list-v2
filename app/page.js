@@ -16,7 +16,7 @@ export default function Home() {
 
   return (
     <>
-      <Container className="search-bar">
+      <Container className={styles.searchBar}>
     
         <SearchBar />
         <AddContactBtn />
