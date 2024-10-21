@@ -6,6 +6,7 @@
   font-size: 1.5em;
   font-style: bold;
   font-weight: "400";
+  color: whitesmoke;
 }
 
 .formControl {
@@ -13,7 +14,6 @@
 }
 
 .searchContainer {
-  border: 2px solid red;
   display: flex;
   justify-content: center;
 }

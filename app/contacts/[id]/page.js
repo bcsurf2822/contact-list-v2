@@ -1,13 +1,13 @@
-import React from "react";
+'use client'
 
-export default function ContactInfo({ contact }) {
+import React from "react";
+import { useParams } from "next/navigation";
+import Link from "next/link";
+
+export default function ContactInfo() {
   return (
     <div>
-      <tr key={contact.id}>
-        <td>{contact.name}</td>
-        <td>{contact.email}</td>
-        <td>{contact.phone}</td>
-      </tr>
+This is contact information for
     </div>
   );
 }

@@ -4,16 +4,18 @@ import Link from "next/link";
 
 import React from "react";
 import { Button, Table } from "react-bootstrap";
-import PropTypes from "prop-types";
 import { formatNumber } from "../utilities/generalFunctions";
 import ContactInfo from "./[id]/page";
+import PropTypes from 'prop-types';
 
 import styles from "./page.module.css";
 
 export default function Contacts({ contacts }) {
-  Contacts.PropTypes = {
-    contacts: PropTypes.objectOf(PropTypes.array).isRequired,
-  };
+
+  const handleDoubleClick = (e) => {
+    console.log("You click on :", e)
+    
+  }
 
   return (
     <div className={styles.tableContainer}>
@@ -29,12 +31,12 @@ export default function Contacts({ contacts }) {
         </thead>
         <tbody>
           {contacts.map((contact) => (
-            <tr key={contact.id}>
+            <tr onDoubleClick={() => handleDoubleClick(contact)} key={contact.id}>
               <td>
                 {" "}
                 <img
                   className={styles.userImage}
-                  src={contact.imageURL}
+                  src={contact.image_URL}
                   alt=""
                 />
               </td>
@@ -55,3 +57,15 @@ export default function Contacts({ contacts }) {
     </div>
   );
 }
+
+Contacts.propTypes = {
+  filteredContacts: PropTypes.arrayOf(
+    PropTypes.shape({
+      id: PropTypes.number.isRequired, 
+      name: PropTypes.string.isRequired,
+      email: PropTypes.string.isRequired,
+      phone_number: PropTypes.string.isRequired,
+      image_URL: PropTypes.string,
+    })
+  ).isRequired,
+};
