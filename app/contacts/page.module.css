@@ -19,3 +19,22 @@
   background-color: white; /* Optional: set a background color */
   z-index: 1; /* Ensure the header stays above the scrolling content */
 }
+
+.addContainer {
+  border: 2px solid red;
+  display: flex;
+  margin-top: 50px;
+  justify-content: center;
+  width: 20%;
+  text-align: center;
+}
+
+.submitBtn {
+  width: 59%;
+}
+
+.userImage {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+}
