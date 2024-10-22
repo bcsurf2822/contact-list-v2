@@ -10,15 +10,3 @@ export const fetchContacts = async () => {
     throw error;
   }
 };
-
-//axios add contact
-
-// export const addContact = async (newContact) => {
-//   try {
-//     const response = await axios.post("/contacts.json", newContact); 
-//     return response.data;
-//   } catch (error) {
-//     console.error("Error adding contact:", error);
-//     throw error;
-//   }
-// };

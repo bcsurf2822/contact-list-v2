@@ -42,8 +42,9 @@ export default function AddContact() {
 
   return (
     <>
-
-        <h2 className={classNames(oxanium.className, styles.addPageTitle)}>New Contact Information</h2>
+      <h2 className={classNames(oxanium.className, styles.addPageTitle)}>
+        New Contact Information
+      </h2>
 
       <Container className={classNames(styles.addContainer, oxanium.className)}>
         <Form onSubmit={handleAddContact}>
@@ -96,7 +97,6 @@ export default function AddContact() {
           </Button>
         </Form>
       </Container>
-
     </>
   );
 }

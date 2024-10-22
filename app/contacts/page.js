@@ -2,7 +2,6 @@
 
 import React from "react";
 import { Button, Table } from "react-bootstrap";
-import { formatNumber } from "../utilities/generalFunctions";
 import PropTypes from "prop-types";
 
 import styles from "../page.module.css";

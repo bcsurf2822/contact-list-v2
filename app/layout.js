@@ -1,4 +1,3 @@
-import localFont from "next/font/local";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap/dist/css/bootstrap.css";
 import "bootstrap-icons/font/bootstrap-icons.css";
@@ -23,7 +22,7 @@ export default function RootLayout({ children }) {
         <Container fluid className="header">
           <h1 className={oxanium.className}>Contacts List v2</h1>
           <Link href={"/"}>
-          <i class="bi bi-houses-fill"></i>
+            <i class="bi bi-houses-fill"></i>
           </Link>
         </Container>
         <ContactsProvider>{children}</ContactsProvider>
