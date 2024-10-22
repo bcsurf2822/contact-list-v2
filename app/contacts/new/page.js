@@ -6,7 +6,7 @@ import Form from "react-bootstrap/Form";
 import { useRouter } from "next/navigation";
 import { useState } from "react";
 
-import styles from "../page.module.css";
+import styles from "../../page.module.css";
 import { useContacts } from "@/app/contexts/ContactsProvider";
 
 export default function AddContact() {

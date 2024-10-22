@@ -1,7 +1,8 @@
 'use client'
 import React from 'react'
 import { Container, Form } from 'react-bootstrap'
-import styles from './components.module.css'
+// import styles from './components.module.css'
+import styles from '../page.module.css'
 import { useState } from 'react'
 import PropTypes from 'prop-types'
 

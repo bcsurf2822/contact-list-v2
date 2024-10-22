@@ -1,56 +1,72 @@
-.page {
-  display: grid;
-  grid-template-rows: 20px 1fr 20px;
-  align-items: center;
-  justify-items: center;
-  min-height: 100svh;
-  padding: 80px;
-  gap: 64px;
-  font-family: var(--font-geist-sans);
+/* Search Content */
+.searchAddContainer {
+  padding-bottom: 1rem;
+  margin-top: 1em;
+  margin-bottom: 1em;
 }
 
-.main {
+.searchContainer {
   display: flex;
-  flex-direction: column;
-  gap: 32px;
-  grid-row-start: 2;
+  justify-content: center;
 }
 
-.main ol {
-  font-family: var(--font-geist-mono);
-  padding-left: 0;
-  margin: 0;
-  font-size: 14px;
-  line-height: 24px;
-  letter-spacing: -0.01em;
-  list-style-position: inside;
-}
-
-.main code {
-  font-family: inherit;
-  background: var(--gray-alpha-100);
-  padding: 2px 4px;
-  border-radius: 4px;
-  font-weight: 600;
-}
-
-.main {
-  align-items: center;
-}
-
-.main ol {
+/* Add Contact Form CSS */
+.form {
   text-align: center;
+}
+
+.formLabel {
+  font-size: 1.8rem;
+  font-style: bold;
+  font-weight: 700;
+  color: antiquewhite;
+}
+
+.formControl {
+  resize: none;
+}
+
+.addContainer {
+  border: 2px solid red;
+  display: flex;
+  margin-top: 50px;
+  justify-content: center;
+  width: 20%;
+  text-align: center;
+}
+
+.submitBtn {
+  width: 59%;
+}
+
+/* Table CSS */
+.tableContainer {
+  position: fixed;
+  bottom: 3;
+  left: 0;
+  right: 0;
+  height: 400px;
+  overflow-y: auto;
+  background: #0f2027;
+}
+
+.table {
+  margin: 0 0 0;
+}
+
+.tableHeader {
+  position: sticky;
+  top: 0;
+  background-color: white;
+  z-index: 1;
+}
+
+.userImage {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
 }
 
 .tableContainer {
   overflow-y: auto;
-}
-
-i .bi {
-  height: 20px;
-}
-
-.searchAddContainer {
-  padding-bottom: 1rem;
-  margin-bottom: 1rem;
 }

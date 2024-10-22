@@ -1,22 +1,23 @@
 body {
-  padding: 1.5rem;
+  margin: 0;
+  background-color: black;
 }
 
-.title {
-  width: 100%;
+.header {
+  font-size: 2.5rem;
   color: antiquewhite;
   display: flex;
-  background: #0f2027; /* fallback for old browsers */
-  background: -webkit-linear-gradient(
-    to right,
-    #2c5364,
-    #203a43,
-    #0f2027
-  ); /* Chrome 10-25, Safari 5.1-6 */
-  background: linear-gradient(
-    to right,
-    #2c5364,
-    #203a43,
-    #0f2027
-  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 250px;
+  background: #0f2027;
+  background: -webkit-linear-gradient(to right, #2c5364, #203a43, #0f2027);
+  background: linear-gradient(to right, #2c5364, #203a43, #0f2027);
+}
+
+i .bi {
+  color: black;
+  height: 50px;
+  width: 50px;
 }

@@ -6,10 +6,17 @@ import { Col, Container, Row } from "react-bootstrap";
 import Contacts from "./contacts/page";
 import SearchBar from "./components/SearchBar";
 
+import {Oxanium} from 'next/font/google'
+
 import AddContactBtn from "./components/AddContactBtn";
 
 import { useContacts } from "./contexts/ContactsProvider";
 import { useState } from "react";
+import classNames from "classnames";
+
+const oxanium = Oxanium({  weight: ['400', '700'],
+  style: ['normal'],
+  subsets: ['latin'] })
 
 export default function Home() {
   const { contacts } = useContacts();
@@ -28,11 +35,11 @@ export default function Home() {
   
   return (
     <>
-      <Container className={styles.searchAddContainer}>
+      <Container className={classNames(oxanium.className, styles.searchAddContainer)}>
         <SearchBar setSearch={setSearch} />
         <AddContactBtn />
       </Container>
-      <Container as="content" className={styles.tableContainer}>
+      <Container as="content" className={classNames(oxanium.className, styles.tableContainer)}>
         <Contacts filteredContact={filteredContact} />
       </Container>
     </>

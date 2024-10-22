@@ -3,10 +3,9 @@
 import React from "react";
 import { Button, Table } from "react-bootstrap";
 import { formatNumber } from "../utilities/generalFunctions";
-import ContactInfo from "./[id]/page";
 import PropTypes from 'prop-types';
 
-import styles from "./page.module.css";
+import styles from "../page.module.css";
 import { useContacts } from "../contexts/ContactsProvider";
 import { useRouter } from "next/navigation";
 
@@ -23,7 +22,7 @@ export default function Contacts({ filteredContact }) {
 
   return (
     <div className={styles.tableContainer}>
-      <Table striped hover className={styles.table}>
+      <Table striped hover variant="dark" className={styles.table}>
         <thead className={styles.tableHeader}>
           <tr>
             <th></th>
