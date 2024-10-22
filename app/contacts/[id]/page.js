@@ -21,8 +21,6 @@ export default function ContactInfo() {
 
   const contact = getContact(Number(id));
 
-  console.log(contact);
-
   if (!contact) {
     return <p>Contact Loading</p>;
   }

@@ -12,7 +12,6 @@ export default function Contacts({ filteredContact }) {
   const router = useRouter();
 
   const handleDoubleClick = (e) => {
-    console.log("You click on :", e);
     router.push(`/contacts/${e}`);
   };
 
@@ -66,7 +65,7 @@ Contacts.propTypes = {
       name: PropTypes.string.isRequired,
       email: PropTypes.string.isRequired,
       phone_number: PropTypes.string.isRequired,
-      image_URL: PropTypes.string,
+      image_url: PropTypes.string,
     })
   ).isRequired,
 };
