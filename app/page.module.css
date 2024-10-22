@@ -1,3 +1,21 @@
+/* Media Queries */
+@media (min-width: 768px) {
+  .table {
+    width: 80%;
+  }
+  .table-container {
+    overflow-x: auto;
+  }
+
+  .email {
+    white-space: normal;
+    word-break: break-word;
+  }
+  .deleteButton {
+    font-size: 1rem;
+  }
+}
+
 /* Search Content */
 .searchAddContainer {
   padding-bottom: 1rem;
@@ -27,16 +45,32 @@
 }
 
 .addContainer {
-  border: 2px solid red;
-  display: flex;
-  margin-top: 50px;
-  justify-content: center;
-  width: 20%;
+  background: #0f2027;
+  background: -webkit-linear-gradient(to right, #2c5364, #203a43, #0f2027);
+  background: linear-gradient(to right, #2c5364, #203a43, #0f2027);
+  width: 100vw;
+  max-width: 400px;
+  box-sizing: border-box;
+  margin: 0 auto;
+  text-align: center;
+  color: antiquewhite;
+  font-weight: 700;
+  border-radius: 8%;
+}
+
+.addPageTitle {
+  color: antiquewhite;
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 20px;
   text-align: center;
 }
 
 .submitBtn {
-  width: 59%;
+  width: 100%;
+  max-width: 300px;
+  box-sizing: border-box;
+  margin-bottom: 0.5em;
 }
 
 /* Table CSS */
@@ -47,11 +81,17 @@
   right: 0;
   height: 400px;
   overflow-y: auto;
-  background: #0f2027;
 }
 
 .table {
-  margin: 0 0 0;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 100%;
+  overflow-x: auto;
+}
+
+.table td {
+  word-break: break-word;
 }
 
 .tableHeader {
@@ -69,4 +109,34 @@
 
 .tableContainer {
   overflow-y: auto;
+}
+
+/* ContactInfo CSS */
+.infoCard {
+  margin: 1em auto 1em auto;
+  display: flex;
+  align-items: center;
+  color: whitesmoke;
+  background: #0f2027;
+  background: -webkit-linear-gradient(to right, #2c5364, #203a43, #0f2027);
+  background: linear-gradient(to right, #2c5364, #203a43, #0f2027);
+}
+
+.infoTitle {
+  font-weight: 700;
+  margin-top: 1em;
+}
+
+.contactInfo {
+  color: whitesmoke;
+  background: #0f2027;
+  background: -webkit-linear-gradient(to right, #2c5364, #203a43, #0f2027);
+  background: linear-gradient(to right, #2c5364, #203a43, #0f2027);
+  text-align: center;
+}
+
+.cardImage {
+  width: 50%;
+  margin-top: 1em;
+  border-radius: 50%;
 }

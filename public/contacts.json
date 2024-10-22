@@ -3,70 +3,70 @@
     {
       "id": 70219577,
       "name": "Albert Einstein",
-      "image_url": "https://en.wikipedia.org/wiki/Albert_Einstein#/media/File:Einstein_1921_by_F_Schmutzer_-_restoration.jpg",
+      "image_url": "/images/defaultAvatar.webp",
       "email": "aeinstein@example.com",
       "phone_number": "15555555555"
     },
     {
       "id": 70219578,
       "name": "Marie Curie",
-      "image_url": "https://en.wikipedia.org/wiki/File:Marie_Curie_c1920.jpg",
+      "image_url": "/images/defaultAvatar.webp",
       "email": "mcurie@example.com",
       "phone_number": "15555555556"
     },
     {
       "id": 70219579,
       "name": "Isaac Newton",
-      "image_url": "https://en.wikipedia.org/wiki/File:GodfreyKneller-IsaacNewton-1689.jpg",
+      "image_url": "/images/defaultAvatar.webp",
       "email": "inewton@example.com",
       "phone_number": "15555555557"
     },
     {
       "id": 70219580,
       "name": "Nikola Tesla",
-      "image_url": "https://en.wikipedia.org/wiki/File:N.Tesla.JPG",
+      "image_url": "/images/defaultAvatar.webp",
       "email": "ntesla@example.com",
       "phone_number": "15555555558"
     },
     {
       "id": 70219581,
       "name": "Charles Darwin",
-      "image_url": "https://en.wikipedia.org/wiki/File:Charles_Darwin_by_G._Richmond.jpg",
+      "image_url": "/images/defaultAvatar.webp",
       "email": "cdarwin@example.com",
       "phone_number": "15555555559"
     },
     {
       "id": 70219582,
       "name": "Galileo Galilei",
-      "image_url": "https://en.wikipedia.org/wiki/File:Justus_Sustermans_-_Portrait_of_Galileo_Galilei_-_WGA21824.jpg",
+      "image_url": "/images/defaultAvatar.webp",
       "email": "ggalilei@example.com",
       "phone_number": "15555555560"
     },
     {
       "id": 70219583,
       "name": "Leonardo da Vinci",
-      "image_url": "https://en.wikipedia.org/wiki/File:Leonardo_da_Vinci_-_presumed_self-portrait_-_WGA12798.jpg",
+      "image_url": "/images/defaultAvatar.webp",
       "email": "ldvinci@example.com",
       "phone_number": "15555555561"
     },
     {
       "id": 70219584,
       "name": "Stephen Hawking",
-      "image_url": "https://en.wikipedia.org/wiki/File:Stephen_Hawking.StarChild.jpg",
+      "image_url": "/images/defaultAvatar.webp",
       "email": "shawking@example.com",
       "phone_number": "15555555562"
     },
     {
       "id": 70219585,
       "name": "Ada Lovelace",
-      "image_url": "https://en.wikipedia.org/wiki/File:Ada_Lovelace_portrait.jpg",
+      "image_url": "/images/defaultAvatar.webp",
       "email": "alovelace@example.com",
       "phone_number": "15555555563"
     },
     {
       "id": 70219586,
       "name": "Alan Turing",
-      "image_url": "https://en.wikipedia.org/wiki/File:Alan_Turing_Aged_16.jpg",
+      "image_url": "/images/defaultAvatar.webp",
       "email": "aturing@example.com",
       "phone_number": "15555555564"
     }

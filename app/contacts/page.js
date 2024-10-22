@@ -3,22 +3,21 @@
 import React from "react";
 import { Button, Table } from "react-bootstrap";
 import { formatNumber } from "../utilities/generalFunctions";
-import PropTypes from 'prop-types';
+import PropTypes from "prop-types";
 
 import styles from "../page.module.css";
 import { useContacts } from "../contexts/ContactsProvider";
 import { useRouter } from "next/navigation";
 
 export default function Contacts({ filteredContact }) {
-
   const router = useRouter();
 
   const handleDoubleClick = (e) => {
-    console.log("You click on :", e)
-    router.push(`/contacts/${e}`)
-  }
+    console.log("You click on :", e);
+    router.push(`/contacts/${e}`);
+  };
 
-  const {deleteContact} = useContacts();
+  const { deleteContact } = useContacts();
 
   return (
     <div className={styles.tableContainer}>
@@ -34,18 +33,24 @@ export default function Contacts({ filteredContact }) {
         </thead>
         <tbody>
           {filteredContact.map((contact) => (
-            <tr onDoubleClick={() => handleDoubleClick(contact.id)} key={contact.id}>
-              <td>
-              </td>
+            <tr
+              onDoubleClick={() => handleDoubleClick(contact.id)}
+              key={contact.id}
+            >
+              <td></td>
               <td>{contact.name}</td>
-              <td>{contact.email}</td>
+              <td className={styles.email}>{contact.email}</td>
               <td>{contact.phone_number}</td>
-
 
               <td className="function-btn">
                 {" "}
-                <Button variant="warning">Edit</Button>{" "}
-                <Button variant="danger" onClick={() => deleteContact(contact.id)}>Delete</Button>
+                <Button
+                  className={styles.deleteButton}
+                  variant="danger"
+                  onClick={() => deleteContact(contact.id)}
+                >
+                  Delete
+                </Button>
               </td>
             </tr>
           ))}
@@ -58,7 +63,7 @@ export default function Contacts({ filteredContact }) {
 Contacts.propTypes = {
   filteredContact: PropTypes.arrayOf(
     PropTypes.shape({
-      id: PropTypes.number.isRequired, 
+      id: PropTypes.number.isRequired,
       name: PropTypes.string.isRequired,
       email: PropTypes.string.isRequired,
       phone_number: PropTypes.string.isRequired,

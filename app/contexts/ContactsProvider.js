@@ -25,7 +25,7 @@ export const ContactsProvider =({ children }) => {
 }, []);
 
   const addNewContact = (newContact) => {
-    setContacts([...contacts, {...newContact, id: generateId()}])
+    setContacts([...contacts, {...newContact, id: generateId(), phone_number: formatNumber(newContact.phone_number)}])
   }
 
   const deleteContact = (id) => {
