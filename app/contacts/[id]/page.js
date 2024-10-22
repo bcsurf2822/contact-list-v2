@@ -19,7 +19,7 @@ export default function ContactInfo() {
   const { id } = useParams();
   const { getContact } = useContacts();
 
-  const contact = getContact(Number(id));
+  const contact = id ? getContact(Number(id)) : null;
 
   if (!contact) {
     return <p>Contact Loading</p>;
