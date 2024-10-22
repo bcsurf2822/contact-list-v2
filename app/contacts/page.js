@@ -17,6 +17,11 @@ export default function Contacts({ filteredContact }) {
 
   const { deleteContact } = useContacts();
 
+  if (!filteredContact || filteredContact.length === 0) {
+    return <p>No contacts available.</p>;
+  }
+
+  
   return (
     <div className={styles.tableContainer}>
       <Table striped hover variant="dark" className={styles.table}>
