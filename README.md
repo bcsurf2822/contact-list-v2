@@ -2,7 +2,7 @@
 
 ### 🚀 **Deployed Site**
 
-🔗 [**Live Demo**](https://contact-list-v2-navy.vercel.app/)
+🔗 [**Demo**](https://contact-list-v2-navy.vercel.app/)
 
 ---
 
