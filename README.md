@@ -16,13 +16,15 @@ This project showcases a fully functional **Contacts List** where users can:
 
 ---
 
-## 🛠️ **Technologies Used**
+## 🛠️ **Technologies / Dependencies Used**
 
 - **Next.js**
-- **React Bootstrap**
-- **Bootstrap Icons**
 - **CSS Modules**
-- **Axios**
+- **Axios** to fetch data from the JSON file
+- **React Bootstrap** for styling utilities and components
+- **Bootstrap Icons** for my home icon
+- **Classnames** to manage multiple classnames
+- **Proptypes** to ensure props passed have expected data type
 
 ---
 
