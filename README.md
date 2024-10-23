@@ -1,4 +1,4 @@
-# 📇 Contacts List Application
+# Contacts List Application
 
 ### 🚀 **Deployed Site**
 
